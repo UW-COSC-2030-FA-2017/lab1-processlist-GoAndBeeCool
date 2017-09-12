@@ -3,40 +3,37 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
+	
+	//Initializing variables
 	int i;
 	int counter = 0;
 	int index = 0;
 
-
+	//Created ifstream Object
 	ifstream infile("text.txt", ios::out);
 
+	//Checking if file exists
 	if (!infile) {
-		cout << "There was a problem opening file "
-			<< endl;
+		cout << "There was a problem opening file " << endl;
 		system("pause");
 		return 0;
 	}
 
+	//Loop to check the number of numbers in file
 	while (infile >> i) {
 		if (counter == 0 || counter == 1) {
-			cout << i << endl;
+			cout << i << endl;            //Printing the First and second number
 		}
 
 		counter++;
 	}
 
-	//infile.seekg(0, infile.end);
+	//Setting the pointer back to the start
 	infile.clear();
 	infile.seekg(0);
 
-	//char buffer[2];
-	//infile.read(buffer, 1);
-	//buffer[1] = 0;
-
-	//cout << buffer << endl;
-
+	//Loop to determine the last two numbers on the file
 	while (infile >> i) {
 		//cout << i << endl;
 		index++;
