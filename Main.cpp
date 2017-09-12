@@ -10,7 +10,7 @@ int main()
 	int index = 0;
 
 
-	ifstream infile("text.txt");
+	ifstream infile("text.txt", ios::out);
 
 	if (!infile) {
 		cout << "There was a problem opening file "
@@ -28,18 +28,27 @@ int main()
 	}
 
 	//infile.seekg(0, infile.end);
+	infile.clear();
+	infile.seekg(0);
 
-	infile.seekg(0, infile.ios::beg);
+	//char buffer[2];
+	//infile.read(buffer, 1);
+	//buffer[1] = 0;
+
+	//cout << buffer << endl;
 
 	while (infile >> i) {
-		
-		if (index == counter - 1 || index == counter) {
+		//cout << i << endl;
+		index++;
+		if (index == counter) {
 			cout << i << endl;
 		}
-		index++;
+		if (index == counter-1) {
+			cout << i << endl;
+		}
 	}
 	
-	cout << counter << endl;
+	cout << "Number of elements: " << counter << endl;
 
 	system("pause");
 
