@@ -6,11 +6,11 @@ using namespace std;
 int main() {
 	
 	//Initializing variables
-	int i;
+	double i;
 	int counter = 0;
 	int index = 0;
 
-	//Created ifstream Object
+	//Creating ifstream Object
 	ifstream infile("text.txt", ios::out);
 
 	//Checking if file exists
