@@ -1,9 +1,10 @@
-#include <iostream>
+float #include <iostream>
 #include <fstream>
 
 using namespace std;
 
 int main() {
+
 
 	//Initializing variables
 	double i;
