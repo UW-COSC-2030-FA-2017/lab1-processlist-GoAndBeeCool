@@ -5,7 +5,6 @@ using namespace std;
 
 int main() {
 
-
 	//Initializing variables
 	double i;
 	int counter = 0;
