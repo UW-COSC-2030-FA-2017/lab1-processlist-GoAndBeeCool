@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	
+
 	//Initializing variables
 	double i;
 	int counter = 0;
@@ -16,7 +16,7 @@ int main() {
 	//Checking if file exists
 	if (!infile) {
 		cout << "There was a problem opening file " << endl;
-		system("pause");
+
 		return 0;
 	}
 
@@ -44,10 +44,10 @@ int main() {
 			cout << i << endl;
 		}
 	}
-	
+
 	cout << "Number of elements: " << counter << endl;
 
-	system("pause");
+
 
 	return 0;
 }
